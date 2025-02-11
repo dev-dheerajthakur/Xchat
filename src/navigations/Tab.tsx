@@ -14,7 +14,6 @@ const Tabs = createBottomTabNavigator<TabNavigatorParamList>();
 export default function Tab() {
   const isDarkMode = useColorScheme() === 'dark' ? 'dark' : 'light';
 
-
   return (
     
     <Tabs.Navigator backBehavior='history' screenOptions={{
