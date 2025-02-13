@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import mmkvStorageReducer from './states/mmkvStorageSlice'
+import socketReducer from './states/socketSlice'
 
 export const store = configureStore({
   reducer: {
-    mmkvStorage: mmkvStorageReducer
+    mmkvStorage: mmkvStorageReducer,
+    socket: socketReducer
   },
 })
 

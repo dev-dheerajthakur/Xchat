@@ -7,7 +7,17 @@ const server = createServer(app);
 const io = new Server(server)
 
 io.on('connection', (socket) => {
-  console.log('a user connected');
+  socket.on('helo', (args)=>{
+    socket.join(args)
+    socket.emit('helo', "hello from the server")
+    console.log(args)
+  });
+
+  socket.on('msg', (args)=>{
+    console.log(args);
+    socket.emit('smsg', "helo smsg from server return")
+  })
+
 });
 
 server.listen(5000, () => {

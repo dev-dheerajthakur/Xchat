@@ -1,13 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { MMKVLoader } from "react-native-mmkv-storage";
 
-const initialState = new MMKVLoader().initialize();
+const initialState = {
+    token: null
+}
 
 const mmkvStorageSlice = createSlice({
     name: 'mmkvStorage',
     initialState,
-    reducers: {}
+    reducers: {
+        updateToken: (state, action)=>{
+            state.token = action.payload
+        }
+    }
 });
 
-export const { } = mmkvStorageSlice.actions;
+export const { updateToken } = mmkvStorageSlice.actions;
 export default mmkvStorageSlice.reducer;
