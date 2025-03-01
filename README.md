@@ -1,4 +1,7 @@
-# to change java version run: sudo update-alternatives --config java
+## change java version
+```sh
+sudo update-alternatives --config java
+```
 
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
