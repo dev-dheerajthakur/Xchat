@@ -1,4 +1,4 @@
-## change java version
+## change java version testingg
 ```sh
 sudo update-alternatives --config java
 ```
